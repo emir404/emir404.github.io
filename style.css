@@ -92,6 +92,7 @@ body {
 .main img {
   margin-bottom: 25px;
   border-radius: 100%;
+  border: 3px solid #02050b;
 }
 
 .main h1 {
@@ -246,6 +247,15 @@ body {
 
 /*  create a keyframes to max-width 768px */
 @media screen and (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  /* make the "navbar" class not visible */
+  .navbar {
+    display: none;
+  }
+
   .about_text {
     margin-left: auto;
     margin-right: auto;
