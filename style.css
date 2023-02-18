@@ -211,23 +211,23 @@ body {
   background-color: rgba(11, 11, 11, 0.5);
   backdrop-filter: blur(5px);
   border-radius: 25px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 .stacks {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  background-color: rgba(11, 11, 11, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  padding: 15px 15px 5px 15px;
 }
 
 .stack {
   flex-direction: row;
   text-align: center;
   font-size: 26px;
-}
-
-.stack img {
-  border-radius: 10px;
 }
 
 .footer {
