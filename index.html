@@ -3,30 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Emir Ayaz's Personal Website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <script async src="script.js"></script>
   </head>
   <body>
-    <header class="main">
+    <div class="cursor"></div>
+    <nav class="navbar">
+      <div class="container">
+        <a class="nav_link" aria-label="About" href="#profile"
+          ><i class="fa-solid fa-user"></i
+        ></a>
+        <a class="nav_link" aria-label="About" href="#about"
+          ><i class="fa-solid fa-address-card"></i
+        ></a>
+        <a class="nav_link" aria-label="Projects" href="#projects"
+          ><i class="fa-solid fa-diagram-project"></i
+        ></a>
+        <a class="nav_link" aria-label="Tech Stack" href="#stack"
+          ><i class="fa-solid fa-microchip"></i
+        ></a>
+      </div>
+    </nav>
+    <header id="profile" class="main">
       <img
         src="assets/img/pfp.jpg"
-        width="128"
-        height="128"
+        width="64"
+        height="64"
         alt="Emir Ayaz's Profile Picture"
       />
       <h1>Emir Ayaz</h1>
@@ -63,7 +78,7 @@
         </a>
       </nav>
     </header>
-    <article class="about_me">
+    <article id="about" class="about_me">
       <h2 class="about_header">About Me</h2>
       <p class="about_text">
         I am a software developer who is passionate about creating new
@@ -79,7 +94,74 @@
         using Python and Lua for some other projects.
       </p>
     </article>
-    <section class="projects"></section>
+    <section id="projects" class="main_projects">
+      <h2 class="header">Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <img
+            src="assets/img/justhink.svg"
+            alt="Justhink Logo"
+            width="232"
+            height="232"
+          />
+          <p class="project_header">Justhink</p>
+        </div>
+        <div class="project">
+          <img
+            src="assets/img/hypestack.png"
+            alt="HypeStack Logo"
+            width="232"
+            height="232"
+          />
+          <p class="project_header">Hypestack</p>
+        </div>
+      </div>
+    </section>
+    <section id="stack" class="main_stack">
+      <h2 class="header">Tech Stack</h2>
+      <div class="stacks">
+        <div class="stack">
+          <img
+            src="assets/img/icons/html.png"
+            alt="Icons"
+            width="64"
+            height="64"
+          />
+        </div>
+        <div class="stack">
+          <img
+            src="assets/img/icons/css.png"
+            alt="Icons"
+            width="64"
+            height="64"
+          />
+        </div>
+        <div class="stack">
+          <img
+            src="assets/img/icons/js.png"
+            alt="Icons"
+            width="64"
+            height="64"
+          />
+        </div>
+        <div class="stack">
+          <img
+            src="assets/img/icons/lua.png"
+            alt="Icons"
+            width="64"
+            height="64"
+          />
+        </div>
+        <div class="stack">
+          <img
+            src="assets/img/icons/py.png"
+            alt="Icons"
+            width="64"
+            height="64"
+          />
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <p class="footer_text">code & design by <span>wearus</span></p>
     </footer>

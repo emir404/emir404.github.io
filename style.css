@@ -2,24 +2,88 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat";
+  font-family: "Poppins";
+  cursor: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-image: url(assets/img/background.jpg);
+  background-image: url(assets/img/background.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   backdrop-filter: blur(25px);
-  min-height: 100vh;
+  overflow: hidden;
   color: azure;
+}
+
+.cursor {
+  z-index: 20;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.5;
+  transform: translate(-50%, -50%);
+  transition: transform 500ms ease, opacity 350ms ease, all 100ms ease-out;
+}
+
+.cursor-hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.navbar {
+  z-index: 10;
+  display: flex;
+  position: sticky;
+  top: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.container {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 50px;
+  background-color: rgba(11, 11, 11, 0.9);
+  border-radius: 25px;
+  gap: 20px;
+}
+
+.nav_link:link {
+  transition: all 300ms ease;
+  color: #cacaca;
+  font-size: 25px;
+}
+
+.nav_link:visited {
+  color: #cacaca;
+  text-decoration: none;
+}
+
+.container:hover .nav_link {
+  opacity: 0.25;
+}
+
+.container .nav_link:hover {
+  opacity: 1;
 }
 
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   flex-direction: column;
   text-align: center;
   transition: 500ms;
@@ -41,7 +105,8 @@ body {
   list-style-type: none;
   margin-top: 15px;
   font-size: 25px;
-  background-color: rgba(11, 11, 11, 0.9);
+  background-color: rgba(11, 11, 11, 0.5);
+  backdrop-filter: blur(5px);
   padding: 5px 15px 5px 15px;
   border-radius: 25px;
   transition: all 500ms ease;
@@ -77,7 +142,8 @@ body {
 
 .about_header {
   padding: 5px 15px 5px 15px;
-  background-color: rgba(11, 11, 11, 0.9);
+  background-color: rgba(11, 11, 11, 0.5);
+  backdrop-filter: blur(5px);
   border-radius: 25px;
   text-align: center;
   margin-bottom: 10px;
@@ -85,7 +151,8 @@ body {
 
 .about_text {
   padding: 10px 15px 10px 15px;
-  background-color: rgba(11, 11, 11, 0.9);
+  background-color: rgba(11, 11, 11, 0.5);
+  backdrop-filter: blur(5px);
   border-radius: 25px;
   text-align: center;
   margin-left: auto;
@@ -93,9 +160,79 @@ body {
   max-width: 600px;
 }
 
+.main_projects {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  padding: 5px 15px 5px 15px;
+  background-color: rgba(11, 11, 11, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  margin-bottom: 15px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.project {
+  padding: 10px 15px 10px 15px;
+  background-color: rgba(11, 11, 11, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  flex-direction: row;
+  text-align: center;
+  font-size: 26px;
+}
+
+.project img {
+  border-radius: 20px;
+}
+
+.main_stack {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  padding: 5px 15px 5px 15px;
+  background-color: rgba(11, 11, 11, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
+  margin-bottom: 15px;
+}
+
+.stacks {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.stack {
+  flex-direction: row;
+  text-align: center;
+  font-size: 26px;
+}
+
+.stack img {
+  border-radius: 10px;
+}
+
 .footer {
   display: flex;
-  position: fixed;
+  position: absolute;
   width: 100%;
   bottom: 0;
   justify-content: center;
@@ -114,5 +251,17 @@ body {
     margin-right: auto;
     max-width: 300px;
     text-align: center;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .stacks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 }
