@@ -30,7 +30,7 @@ body {
   pointer-events: none;
   opacity: 0.5;
   transform: translate(-50%, -50%);
-  transition: transform 500ms ease, opacity 350ms ease, all 100ms ease-out;
+  transition: transform 500ms ease, opacity 350ms ease;
 }
 
 .cursor-hover {
